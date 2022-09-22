@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/bootstrap" />
+  <style>
+    a:link {
+      color: rgb(0, 150, 0);
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: rgb(0, 150, 0);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: rgb(0, 100, 0);
+      text-decoration: none;
+      font: bold;
+    }
+
+    a:active {
+      color: rgb(0, 100, 0);
+      text-decoration: none;
+    }
+  </style>
+  <title>Debug</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <div class="d-flex float-start">
+        <a class="navbar-brand" href="/">
+          <p class="fs-1 fw-bold">&#128176; Bank of Gaidos</p>
+        </a>
+        <a class="translate-middle-y" href="/makeTransaction" style="margin-bottom: 0%; margin-top: 9%">
+          <button type="button" class="btn btn-primary">
+            Make Transaction
+          </button>
+        </a>
+        <a class="translate-middle-y" href="/viewTransactions" style="margin-bottom: 0%; margin-top: 9%">
+          <button type="button" class="btn btn-primary">
+            View Transactions
+          </button>
+        </a>
+        <a class="translate-middle-y" href="/debug" style="margin-bottom: 0%; margin-top: 9%">
+          <button type="button" class="btn btn-primary">Debug</button>
+        </a>
+      </div>
+      <a href="/"></a>
+      <div class="float-end">
+        <a href="/changePassword">
+          <button type="button" class="btn btn-primary">
+            Change Password
+          </button>
+        </a>
+        <a href="/login">
+          <button type="button" class="btn btn-primary">Login</button>
+        </a>
+        <a href="/signup">
+          <button type="button" class="btn btn-primary">Signup</button>
+        </a>
+        <a href="/logout">
+          <button type="button" class="btn btn-primary">Logout</button>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="justify-content-center text-center" style="width: 75%; margin-left: 12.5%; margin-bottom: 0px">
+    <p class="fs-3 fw-bold">Debug Menu</p>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Username</th>
+          <th scope="col">Password</th>
+          <th scope="col">Balance</th>
+          <th scope="col">Permission level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%for (user in users) {%>
+          <tr>
+            <td>
+              <%=JSON.stringify(users[user].id)%>
+            </td>
+            <td>
+              <%=JSON.stringify(users[user].username)%>
+            </td>
+            <td>
+              <%=JSON.stringify(users[user].password)%>
+            </td>
+            <td>
+              <%=JSON.stringify(users[user].balance)%>
+            </td>
+            <td>
+              <%=JSON.stringify(users[user].permissions)%>
+            </td>
+          </tr>
+
+          <tr>
+            <%}%>
+          </tr>
+      </tbody>
+    </table>
+    <br />
+    <br />
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Sender ID</th>
+          <th scope="col">Receiver ID</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%for (transaction in transactions) {%>
+          <tr>
+            <td>
+              <%=JSON.stringify(transactions[transaction].senderId)%>
+            </td>
+            <td>
+              <%=JSON.stringify(transactions[transaction].receiverId)%>
+            </td>
+            <td>
+              <%=JSON.stringify(transactions[transaction].amount)%>
+            </td>
+          </tr>
+          <%}%>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>

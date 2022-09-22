@@ -1,0 +1,65 @@
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="/bootstrap" />
+   <title>Signup</title>
+</head>
+
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+         <div class="d-flex float-start">
+            <a class='navbar-brand' href="/">
+               <p class="fs-1 fw-bold">&#128176; Bank of Gaidos</p>
+            </a>
+            <a class="translate-middle-y" href="/makeTransaction" style="margin-bottom: 0%; margin-top: 9%;">
+               <button type="button" class="btn btn-primary">Make Transaction</button>
+            </a>
+            <a class="translate-middle-y" href="/viewTransactions" style="margin-bottom: 0%; margin-top: 9%;">
+               <button type="button" class="btn btn-primary">View Transactions</button>
+            </a>
+            <a class="translate-middle-y" href="/debug" style="margin-bottom: 0%; margin-top: 9%;">
+               <button type="button" class="btn btn-primary">Debug</button>
+            </a>
+         </div>
+         <a href="/"></a>
+         <div class="float-end">
+            <a href="/changePassword">
+               <button type="button" class="btn btn-primary">Change Password</button>
+            </a>
+            <a href="/login">
+               <button type="button" class="btn btn-primary">Login</button>
+            </a>
+            <a href="/signup">
+               <button type="button" class="btn btn-primary">Signup</button>
+            </a>
+            <a href="/logout">
+               <button type="button" class="btn btn-primary">Logout</button>
+            </a>
+         </div>
+      </div>
+   </nav>
+   <div class="justify-content-center text-center" style="width: 25%; margin-left: 37.5%; margin-bottom: 0px">
+      <p class='fs-3 fw-bold'>Signup</p>
+      <form action="/signup" method="post">
+         <div class="input-group mb-3">
+            <span class="input-group-text">Username</span>
+            <input type="text" class="form-control" placeholder="Username" name="username" />
+         </div>
+         <div class="input-group mb-3">
+            <span class="input-group-text">Password</span>
+            <input type="text" class="form-control" placeholder="Password" name="password" />
+         </div>
+         <div class="input-group mb-3">
+            <span class="input-group-text">Confirm Password</span>
+            <input type="text" class="form-control" placeholder="Confirm Password" name="confirmPassword" />
+         </div>
+         <button type="submit" class="btn btn-primary">Signup</button>
+      </form>
+   </div>
+</body>
+
+</html>

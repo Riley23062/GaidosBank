@@ -1,0 +1,1 @@
+bcrypt bootstrap ejs express express-session mysql socket.io sqlite3
